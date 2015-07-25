@@ -3,19 +3,17 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title><%= @title || "Equilibria" %></title>
-  <%= favicon_link_tag 'favicon.ico' %>
-  <%= favicon_link_tag 'apple-touch-icon.png', rel: 'apple-touch-icon', type: 'image/png' %>
+  <%= favicon_link_tag 'home/logo.png' %>
+  <%= favicon_link_tag 'home/logo.png', rel: 'logo', type: 'image/png' %>
   <%= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true %>
+  <link href='http://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div id="wrap">
-    <header>
-      <%= render 'layouts/navigation' %>
-    </header>
+  <!--<div id="wrap">-->
 
-    <div class="container">
+    <div class="container-fluid">
 
       <div class="row">
         <div class="col-sm-6 col-sm-offset-3 text-center">
@@ -24,13 +22,11 @@
       </div>
 
       <div class="row">
-        <div class="col-sm-12">
-          <%= yield %>
-        </div>
+        <%= yield %>
       </div>
 
     </div>
-  </div>
+  <!--</div>-->
 
   <%= render 'layouts/footer' %>
 

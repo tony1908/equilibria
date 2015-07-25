@@ -1,2 +1,45 @@
 <% title("Home Page") %>
-<h1><i class="fa fa-home"></i> Home Page <small>views/pages/home.html.erb</small></h1>
+<header>
+	<%= render 'layouts/navigation' %>
+</header>
+
+<div id="home-init">
+	<div class="container"></div>
+</div>
+
+<div id="products">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-lg-4 col-md-4 col-sm-2 text-center">
+				&nbsp;
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-4 text-center">
+				<div id="text-products">
+					Nuestro Mercado
+				</div>
+			</div>
+			<div class="col-lg-4 col-md-4 col-sm-6 text-center">
+				<input type="text" class="form-control" placeholder="Búsqueda">
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="contact-form">
+	<div class="container-fluid">
+		<div class="row">
+			<form method="POST">
+				<div class="col-lg-1 col-md-1 col-sm-1">&nbsp;</div>
+				<div class="col-lg-5 col-md-5 col-sm-5">
+					<input type="text" class="form-control" placeholder="Nombre" required pattern="[a-zA-Záéíóú ]{3,256}">
+					<input type="email" class="form-control" placeholder="Correo electrónico" required>
+					<input type="text" class="form-control" placeholder="Teléfono" id="phone">
+				</div>
+				<div class="col-lg-5 col-md-5 col-sm-5">
+					<textarea class="form-control" placeholder="Comentario" required></textarea>
+					<button class="btn btn-info">Enviar</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
