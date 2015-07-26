@@ -4,22 +4,98 @@
 </header>
 
 <div id="home-init">
-	<div class="container"></div>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-lg-1">&nbsp;</div>
+			<div class="col-lg-5" id="home-text">
+				"Equilibria es la<br> mano invisible del mercado"
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-lg-1">&nbsp;</div>
+			<div class="col-lg-5" id="home-button">
+				<button class="btn" id="producer">Productor</button>
+				<button class="btn" id="consumer">Comprador</button>
+			</div>
+		</div>
+	</div>
 </div>
 
-<div id="products">
+<div id="market">
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-lg-4 col-md-4 col-sm-2 text-center">
 				&nbsp;
 			</div>
 			<div class="col-lg-4 col-md-4 col-sm-4 text-center">
-				<div id="text-products">
+				<div id="text-market">
 					Nuestro Mercado
 				</div>
 			</div>
-			<div class="col-lg-4 col-md-4 col-sm-6 text-center">
+			<div class="col-xs-1">&nbsp;</div>
+			<div class="col-lg-4 col-md-4 col-sm-6 col-xs-9 text-center">
 				<input type="text" class="form-control" placeholder="Búsqueda">
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="products">
+	<div class="container">
+		<div class="col-lg-4 col-md-4 col-sm-6">
+			<div class="product">
+				<img src="<%= asset_path 'home/1.jpg' %>">
+				<div class="product-place">Lugar</div>
+				<div class="product-producer">Productor</div>
+				<div class="product-description">Descripción Descripción Descripción Descripción Descripción</div>
+				<center><button class="btn product-buy">Comprar</button></center>
+			</div>
+		</div>
+		<div class="col-lg-4 col-md-4 col-sm-6">
+			<div class="product">
+				<img src="<%= asset_path 'home/2.jpg' %>">
+				<div class="product-place">Lugar</div>
+				<div class="product-producer">Productor</div>
+				<div class="product-description">Descripción Descripción Descripción Descripción Descripción</div>
+				<center><button class="btn product-buy">Comprar</button></center>
+			</div>
+		</div>
+		<div class="col-lg-4 col-md-4 col-sm-6">
+			<div class="product">
+				<img src="<%= asset_path 'home/3.jpg' %>">
+				<div class="product-place">Lugar</div>
+				<div class="product-producer">Productor</div>
+				<div class="product-description">Descripción Descripción Descripción Descripción Descripción</div>
+				<center><button class="btn product-buy">Comprar</button></center>
+			</div>
+		</div>
+		<div class="col-lg-4 col-md-4 col-sm-6">
+			<div class="product product-bottom product-sm product-xs">
+				<img src="<%= asset_path 'home/4.jpg' %>">
+				<div class="product-place">Lugar</div>
+				<div class="product-producer">Productor</div>
+				<div class="product-description">Descripción Descripción Descripción Descripción Descripción</div>
+				<center><button class="btn product-buy">Comprar</button></center>
+			</div>
+		</div>
+		<div class="col-lg-4 col-md-4 col-sm-6">
+			<div class="product product-bottom product-xs">
+				<img src="<%= asset_path 'home/5.jpg' %>">
+				<div class="product-place">Lugar</div>
+				<div class="product-producer">Productor</div>
+				<div class="product-description">Descripción Descripción Descripción Descripción Descripción</div>
+				<center><button class="btn product-buy">Comprar</button></center>
+			</div>
+		</div>
+		<div class="col-lg-4 col-md-4 col-sm-6">
+			<div class="product product-bottom">
+				<img src="<%= asset_path 'home/6.jpg' %>">
+				<div class="product-place">Lugar</div>
+				<div class="product-producer">Productor</div>
+				<div class="product-description">Descripción Descripción Descripción Descripción Descripción</div>
+				<center><button class="btn product-buy">Comprar</button></center>
 			</div>
 		</div>
 	</div>

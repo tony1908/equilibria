@@ -350,7 +350,7 @@ html,body {
 
 #wrap {
   min-height: 100%;
-  padding-bottom: 120px;
+  
 }
 
 blockquote{
@@ -452,6 +452,10 @@ $space-xs: 10px;
 
 //***********************************************************
 // NAVBAR
+
+@media screen and (max-width: 768px) {
+  $navbar-default-bg: rgba(0,0,0,1);
+}
 
 .links li {
   margin-top: 54px;
@@ -555,36 +559,162 @@ img {
 //***********************************************************
 // HOME
 #home-init {
-  background: image-url('home/home.jpg');
+  background: image-url('home/home.jpg') no-repeat center center scroll;
   width: 100%;
   height: 445px;
+  color: white;
+  font-family: Roboto, sans-serif;
+
+  #home-text {
+    font-size: 40px;
+    text-align: left;
+    margin-top: 170px;
+    margin-left: 30px;
+  }
+
+  @media screen and (max-width: 640px) {
+    background: image-url('home/back-ground-home-mobile.jpg') no-repeat center center scroll;
+    height: 1136px;
+    #home-text {
+      margin-top: 480px;
+    }
+  }
+
+  #home-button {
+    margin-left: 30px;
+
+    button {
+      width: 180px;
+      height: 35px;
+      border-radius: 10px;
+      padding-top: 8.5v;
+      padding-bottom:8.5v;
+      font-size: 18px;
+      font-weight: lighter;
+    }
+
+    @media screen and (max-width: 640px) {
+
+      button {
+        width: 160px;
+        margin-top: 20px;
+      }
+    }
+
+    #producer {
+      background-color: #00A2B1;
+      margin-right: 18px;
+    }
+
+    #consumer {
+      background-color: #F49E21;
+    }
+  }
 }
 //***********************************************************
 
 //***********************************************************
-// PRODUCTS
-#products {
+// MARKET
+#market {
   color: white;
   background-color: #00A2B1;
   font-family: Roboto, sans-serif;
 
-  #text-products {
+  #text-market {
     margin-top: 15px;
     margin-bottom: 15px;
-    font-size: 1.875em;
+    font-size: 30px;
     font-weight: bold;
   }
 
   input {
-    margin-left: 10%;
-    margin-top: 15px;
+    margin-left: 10px;
+    margin-top: 1px;
     margin-bottom: 15px;
     background-color: #00A2B1;
     padding-left: 10px;
     padding-right: 10px;
     font-size: 1em;
     width: 80%;
+    height:30px;
     color: white;
+  }
+  @media screen and (max-width: 768px) {
+    input {
+      width: 100%;
+    }
+  }
+}
+//***********************************************************
+
+//***********************************************************
+// PRODUCTS
+#products {
+
+  font-family: Roboto, sans-serif;
+  
+  .product {
+    width: 300px;
+    border-bottom: 1px solid #000;
+    margin-top: 40px;
+    padding-bottom:40px;
+
+    .product-place {
+      height: 40px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #6D6466;
+    }
+
+    .product-producer {
+      height: 40px;
+      padding-top: 11px;
+      padding-bottom: 11px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #6D6466;
+    }
+
+    .product-description {
+      font-family: 'Alegreya', serif;
+      font-size: 16px;
+      color: #A5A4A4;
+    }
+
+    .product-buy {
+      margin-top: 20px;
+      width: 120px;
+      height: 40px;
+      border-radius: 10px;
+      background-color: #00A2B1;
+      font-size: 20px;
+      color: #FFF;
+    }
+  }
+
+  .product-bottom {
+    margin-bottom: 40px;
+    border-bottom: 0px;
+  }
+
+  @media screen and (max-width: 991px) {
+    .product-sm {
+      border-bottom: 1px solid #000;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .product {
+      width: 80%;
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+
+    .product-xs {
+      border-bottom: 1px solid #000;
+    }
   }
 }
 //***********************************************************
@@ -624,6 +754,13 @@ img {
 
   @media screen and (max-width: 768px) {
     text-align: center;
+    input {
+      margin-left: 3%;
+    }
+
+    textarea {
+      margin-left: 3%;
+    }
   }
 
   button {
