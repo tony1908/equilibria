@@ -1,11 +1,26 @@
-<div id="menu-mobile">
+<div id="nav-menu-mobile">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-2">
+        <button class="c-hamburger c-hamburger--rot" id="menu-icon">
+          <span></span>
+        </button>
+      </div>
+      <div class="col-xs-8" id="logo-mobile">
+        <a href="<%= root_path %>"><img src="<%= asset_path 'home/logo.png' %>"></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="menu-mobile" class="menu-mobile">
   <ul>
     <center><a href="<%= root_path %>"><img width="90px" src="<%= asset_path 'home/logo.png' %>"></a></center>
     <%= render 'layouts/navigation_links' %>
   </ul>
 </div>
-<!--
-<nav class="navbar navbar-default navbar-fixed-top">
+
+<nav class="navbar navbar-default">
   <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -23,4 +38,3 @@
     </div>
   </div>
 </nav>
--->
