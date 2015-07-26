@@ -695,7 +695,7 @@ img {
 }
 
 .navbar {
-  z-index: 1;
+  z-index: 2;
   display: inherit;
   @media screen and (max-width: 767px) {
     display: none;
@@ -724,9 +724,15 @@ img {
   #home-text {
     font-size: 40px;
     text-align: left;
-    margin-top: 170px;
+    margin-top: 30px;
     margin-left: 30px;
     font-weight: 300;
+  }
+
+  @media screen and (min-width: 640px) and (max-width: 768px) {
+    #home-text {
+      margin-top: 160px;
+    }
   }
 
   @media screen and (max-width: 640px) {
