@@ -1,23 +1,6 @@
 <% title("Home Page") %>
-<header>
-	<%= render 'layouts/navigation' %>
-</header>
-
 <div id="home-init">
-	<div id="nav-menu">
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-2">
-					<button type="button" id="menu-icon" class="btn">
-						<span class="glyphicon glyphicon-menu-hamburger"></span>
-					</button>
-				</div>
-				<div class="col-xs-9" id="logo-mobile">
-					<center><a href="<%= root_path %>"><img src="<%= asset_path 'home/logo.png' %>"></a></center>
-				</div>
-			</div>
-		</div>
-	</div>
+	<%= render 'layouts/navigation' %>
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-lg-1">&nbsp;</div>

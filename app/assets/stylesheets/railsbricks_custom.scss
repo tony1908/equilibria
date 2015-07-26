@@ -454,10 +454,6 @@ $space-xs: 10px;
 //***********************************************************
 // NAVBAR
 
-@media screen and (max-width: 768px) {
-  $navbar-default-bg: rgba(0,0,0,1);
-}
-
 .links li {
   margin-top: 54px;
   margin-right: 60px;
@@ -559,19 +555,91 @@ img {
 
 //***********************************************************
 // MENU
-#nav-menu {
+
+//***********************************************************
+// Copyright 2014, Call Me Nick
+.c-hamburger {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  margin: 0;
+  left: -15px;
+  top:-1px;
+  padding: 0;
+  width: 96px;
+  @media screen and (max-width: 441px) {
+    width: 70px;
+    height: 96px;
+  }
+  height: 96px;
+  font-size: 0;
+  text-indent: -9999px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.c-hamburger:focus {
+  outline: none;
+}
+
+.c-hamburger span {
+  display: block;
+  position: absolute;
+  top: 44px;
+  left: 18px;
+  right: 18px;
+  height: 8px;
+  background: #28AADC;
+}
+
+.c-hamburger span::before,
+.c-hamburger span::after {
+  position: absolute;
+  display: block;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background-color: #28AADC;
+  content: "";
+}
+
+.c-hamburger span::before {
+  top: -20px;
+}
+
+.c-hamburger span::after {
+  bottom: -20px;
+}
+
+.c-hamburger--rot {
+  background-color: rgba(0,0,0,0);
+}
+
+.c-hamburger--rot span {
+  transition: transform 0.3s;
+}
+
+/* active state, i.e. menu open */
+.c-hamburger--rot.is-active {
+  background-color: #166888;
+}
+
+.c-hamburger--rot.is-active span {
+  transform: rotate(90deg);
+  @media screen and (max-width: 441px) {
+    left: 25%;
+  }
+}
+//***********************************************************
+
+
+#nav-menu-mobile {
   display: none;
   position: fixed;
-
-  button {
-    background-color: rgba(0,0,0,0);
-
-    span {
-      color: #00A2B1;
-      font-size: 45px;
-      font-weight: 100;
-    }
-  }
 
   img {
     margin-left: 65%;
@@ -580,7 +648,7 @@ img {
   }
 
   @media screen and (max-width: 767px) {
-    z-index: 3;
+    z-index: 1;
     display: inherit;
   }
 }
@@ -588,6 +656,7 @@ img {
 #menu-mobile {
 
   width: 68%;
+  height: 100%;
   left: -100%;
   position: fixed;
   background-color: white;
@@ -622,6 +691,22 @@ img {
   display: none;
   @media screen and (max-width: 767px) {
     display: inherit;
+  }
+}
+
+.navbar {
+  z-index: 1;
+  display: inherit;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  .navbar-right {
+    margin-right:-8vw;
+
+    li {
+      margin-right: 25px;
+    }
   }
 }
 
