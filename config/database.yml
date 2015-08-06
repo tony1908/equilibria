@@ -5,8 +5,7 @@ development:
   adapter: postgresql
   encoding: utf8
   database: equilibria_development
-  username: jvs
+  username: postgres
   host: localhost
   pool: 5
   port: 5432
-  
